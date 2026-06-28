@@ -1,6 +1,9 @@
 # Arnés del agente y diseño (no subir al remoto público)
 .agent/
 
+# Cursor local (instrucciones formador — no material alumno)
+.cursor/
+
 # Legacy: por si existían en versiones anteriores
 AGENTS.md
 briefing.md

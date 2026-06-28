@@ -70,7 +70,7 @@ Diagrama «solo cajas mágicas IA» sin IAM ni red → **red flag**.
 |------|----------|
 | ML clásico | Precision/recall, drift, latency p99 |
 | GenAI | Token cost/user, citation rate, thumbs down rate |
-| Negocio | Tiempo ahorrado, reducción llamadas, NO solo «wow demo» |
+| Negocio | Tiempo ahorrado, reducción llamadas, NO solo impresión inicial del POC |
 | Operación | MTTR, error budget |
 
 Exige **golden set** evaluación antes de go-live GenAI interno.
@@ -79,7 +79,7 @@ Exige **golden set** evaluación antes de go-live GenAI interno.
 
 | Propuesta | Realidad |
 |-----------|----------|
-| «Plataforma IA lista en 2 semanas» | Solo UI demo |
+| «Plataforma IA lista en 2 semanas» | Solo interfaz de POC sin producción |
 | «Kubernetes porque es futuro» | Sin SRE |
 | «GPT para todo» | Sin caso uso medido |
 | «100% automatizado» | Sin humano en loop |

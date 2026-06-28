@@ -2,7 +2,7 @@
 
 [Siguiente página →](labs/M01-arquitectura-cloud-moderna-ia/README.md)
 
-Material de referencia en formato **libro digital**: cinco módulos temáticos encadenados, con capítulos que puedes seguir en orden o proyectar en sesión.
+Material de referencia en formato **libro digital**: cinco módulos temáticos encadenados, con capítulos que puedes seguir en orden de lectura.
 
 **AWS** es la referencia principal; se incluyen comparativas con **Azure** y reflexiones sobre entornos híbridos y enterprise.
 
