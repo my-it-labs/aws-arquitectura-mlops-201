@@ -1,0 +1,40 @@
+---
+description: Contexto del curso TMB — AWS, MLOps, toma de decisiones (leer siempre)
+alwaysApply: true
+---
+
+# Curso — Arquitectura Cloud Moderna, AWS y MLOps (TMB)
+
+**Workspace correcto:** esta carpeta `aws-arquitectura-mlops-201`, NO `/home/david/Cursos/template`.
+
+- **Cliente:** TMB (Transportes Metropolitanos de Barcelona)
+- **Repo:** `my-it-labs/aws-arquitectura-mlops-201` · nivel 201
+- **12 h lectivas · 4 sesiones × 3 h · 100 % remoto**
+
+## Formato (no lab-first clásico)
+
+- Formador proyecta, demo mínima, explica; **alumnos observan** (sin hands-on).
+- Contenido **conceptual**; 12 h para temario amplio.
+- **AWS:** cuenta personal del formador; coste ~0; borrar recursos en la misma sesión (`.agent/diseno/demo-aws-costes-limpieza.md`).
+
+## Dos capas
+
+| Alumno (GitHub) | Formador (`.agent/`, gitignored) |
+|-----------------|----------------------------------|
+| 5 módulos `labs/M01…M05/` (README conceptual) | Guiones `diseno/diseno-pedagogico/sesiones/sesion-01…04.md` |
+| Sin horarios ni guiones | Ritmo, FAQ, limpieza AWS |
+
+Sesiones → módulos: S1=M01, S2=M02, S3=M03, S4=M04+M05. Cierre S4 = diagrama en vivo (no workshop con entregables).
+
+## Documento maestro
+
+Antes de editar contenido, leer **`.agent/diseno/contexto.md`** (temario, decisiones del diseño, mapa de ficheros).
+
+También: `.agent/SEED.md`, `.agent/diseno/briefing.md`, `.agent/diseno/temario.md`.
+
+## Reglas de edición
+
+- **No** poner horas, sesiones ni planificación docente en `README.md` ni `labs/`.
+- **No** reintroducir labs hands-on alumno salvo indicación explícita del formador.
+- Material alumno: tablas conceptuales, navegación «← · →» entre módulos.
+- Demos AWS solo según `demo-aws-costes-limpieza.md` (S2: S3 + Lambda efímeros).
