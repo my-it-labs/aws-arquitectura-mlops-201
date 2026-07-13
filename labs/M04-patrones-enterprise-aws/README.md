@@ -17,6 +17,7 @@
 | 2 | [Patrones de IA y serving](M04-02-patrones-ia-serving.md) | Inferencia, RAG, agentes, multi-model |
 | 3 | [Kubernetes y ML](M04-03-kubernetes-plataforma-ml.md) | GPU, autoscaling, multi-tenant |
 | 4 | [Enterprise y seguridad](M04-04-enterprise-seguridad-modelos.md) | Landing zones, IAM, zero trust, auditoría |
+| 5 | [Casos de uso agentes (TMB)](M04-05-casos-uso-agentes-tmb.md) | Validación casos agentes — explotación metro, SAP, streams |
 
 → Empieza por **[Capítulo 1 — Patrones de plataforma](M04-01-patrones-plataforma-datos.md)**.
 

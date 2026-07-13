@@ -93,5 +93,5 @@ Implementación: Lambda/Bedrock con reglas o modelo clasificador ligero.
 ## Resumen
 
 - Elige batch vs online según SLA — no mezcles requisitos.
-- RAG es el patrón GenAI enterprise por defecto; agentes son escalación con gobierno.
+- RAG es el patrón GenAI enterprise por defecto; agentes son escalación con gobierno — ver casos TMB en [M04-05](M04-05-casos-uso-agentes-tmb.md).
 - Multi-model routing controla coste y compliance sin multiplicar apps.

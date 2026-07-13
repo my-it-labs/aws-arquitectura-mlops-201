@@ -1,6 +1,6 @@
 # M05 — Costes, Gobierno y Toma de Decisiones
 
-[← Página anterior](../M04-patrones-enterprise-aws/M04-04-enterprise-seguridad-modelos.md) · [Siguiente página →](M05-01-cost-management-plataformas-ia.md)
+[← Página anterior](../M04-patrones-enterprise-aws/M04-05-casos-uso-agentes-tmb.md) · [Siguiente página →](M05-01-cost-management-plataformas-ia.md)
 
 ## Qué aprenderás
 

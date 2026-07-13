@@ -1,6 +1,6 @@
 # M04-04 — Enterprise, landing zones y seguridad de modelos
 
-[← Página anterior](M04-03-kubernetes-plataforma-ml.md) · [Siguiente página →](../M05-costes-gobierno-decisiones/README.md)
+[← Página anterior](M04-03-kubernetes-plataforma-ml.md) · [Siguiente página →](M04-05-casos-uso-agentes-tmb.md)
 
 ## Landing Zone
 

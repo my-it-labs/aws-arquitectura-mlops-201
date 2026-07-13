@@ -19,10 +19,10 @@ Navega con **← Página anterior · Siguiente página →** al final de cada p�
 | [M01](labs/M01-arquitectura-cloud-moderna-ia/README.md) | 5 | Arquitectura cloud moderna, capas IA, GenAI, MLOps |
 | [M02](labs/M02-servicios-aws-plataformas/README.md) | 6 | Servicios AWS: compute, datos, SageMaker, Bedrock |
 | [M03](labs/M03-comparativa-aws-azure/README.md) | 4 | AWS vs Azure, híbrido, casos de elección |
-| [M04](labs/M04-patrones-enterprise-aws/README.md) | 4 | Patrones plataforma, IA, Kubernetes, enterprise |
+| [M04](labs/M04-patrones-enterprise-aws/README.md) | 5 | Patrones plataforma, IA, Kubernetes, enterprise, casos agentes TMB |
 | [M05](labs/M05-costes-gobierno-decisiones/README.md) | 3 | Costes, gobierno, evaluación de propuestas |
 
-**Total: 22 capítulos** de contenido + 5 índices de módulo.
+**Total: 23 capítulos** de contenido + 5 índices de módulo.
 
 ## Público
 
