@@ -48,8 +48,10 @@ Capa de **políticas** sobre prompts y respuestas:
 Bedrock **Knowledge Bases** abstraen parte del pipeline RAG:
 
 1. Conectas fuentes (S3, web crawler, Confluence… según conectores).
-2. Bedrock chunking + embeddings + índice (a menudo OpenSearch Serverless).
+2. Bedrock aplica **chunking** + **embeddings** + índice (a menudo OpenSearch Serverless).
 3. **RetrieveAndGenerate** — recupera contexto y genera respuesta.
+
+El **corpus** (documentos en S3 u orígenes conectados) y la estrategia de **chunking** se detallan en [M01-04 — Corpus y chunking](../M01-arquitectura-cloud-moderna-ia/M01-04-ia-generativa-fundamentos.md#chunking).
 
 | Ventaja | Consideración |
 |---------|---------------|

@@ -17,7 +17,7 @@
 | 1 | [Plataformas cloud modernas](M01-01-plataformas-cloud-modernas.md) | Evolución, DevOps, Platform Engineering, DataOps |
 | 2 | [Capas de la arquitectura IA](M01-02-capas-arquitectura-ia.md) | Ingesta, procesamiento, entrenamiento, serving, observabilidad, gobierno |
 | 3 | [Tipos de carga IA](M01-03-tipos-carga-ia.md) | Batch, real-time, RAG, fine-tuning, agentes, híbridos |
-| 4 | [IA generativa — fundamentos](M01-04-ia-generativa-fundamentos.md) | Modelos fundacionales, tokens, embeddings, vectores, riesgos |
+| 4 | [IA generativa — fundamentos](M01-04-ia-generativa-fundamentos.md) | Modelos fundacionales, tokens, embeddings, corpus, chunking, RAG, riesgos |
 | 5 | [MLOps — pipeline conceptual](M01-05-mlops-pipeline-conceptual.md) | Reproducibilidad, registro, despliegue, monitorización |
 
 → Empieza por **[Capítulo 1 — Plataformas cloud modernas](M01-01-plataformas-cloud-modernas.md)**.

@@ -46,7 +46,76 @@ Pregunta → embedding pregunta → búsqueda en índice vectorial → top-K chu
 
 La calidad del RAG depende tanto del **modelo generativo** como del **modelo de embeddings** y del **chunking** de documentos.
 
-## Bases de datos vectoriales e índices
+## Corpus
+
+El **corpus** es el **conjunto de documentos** (o textos) que alimentan un sistema GenAI — sobre todo en **RAG**. No es «toda la base de datos de la organización», sino la **colección acotada y gobernada** que el sistema puede consultar.
+
+| Ejemplo sector transporte | Tipo de contenido |
+|---------------------------|-------------------|
+| Procedimientos de sala de control | PDFs, Word en repositorio corporativo |
+| Manuales de mantenimiento | Documentación técnica de activos |
+| Políticas internas | RGPD, uso de IA, comunicación |
+| FAQs operativas | Textos curados por expertos |
+
+Propiedades que importan en decisiones de arquitectura:
+
+| Propiedad | Por qué importa |
+|-----------|-----------------|
+| **Calidad** | Documentos obsoletos o contradictorios → respuestas incorrectas |
+| **Gobierno** | Quién añade/borra, versiones, clasificación (interno / confidencial) |
+| **Vigencia** | Un procedimiento antiguo indexado puede ser peligroso |
+| **Alcance** | Streams, SAP en tiempo real o tablas operativas **no son corpus** por sí solos — el corpus suele ser **texto documental** indexado para búsqueda semántica |
+
+En cloud, el corpus suele residir en **almacén objeto** (p. ej. S3) antes de indexarse. Bedrock Knowledge Bases y pipelines DIY parten de ahí.
+
+## Chunking
+
+El **chunking** consiste en **partir cada documento en trozos** («chunks») antes de generar **embeddings** y cargarlos en el índice vectorial.
+
+### Por qué hace falta
+
+Los modelos y los índices tienen **límite de contexto**. La recuperación funciona mejor con **fragmentos focalizados** que con un manual entero de decenas de páginas.
+
+```
+Manual de contingencia (50 páginas)
+        │
+        ▼ chunking
+   [chunk 1]  [chunk 2]  [chunk 3]  …  [chunk N]
+        │
+        ▼ embeddings
+   vectores en índice → búsqueda por similitud
+```
+
+Ante una pregunta del usuario, el sistema **recupera los chunks más relevantes** y los incluye en el prompt del modelo fundacional.
+
+### Parámetros de diseño
+
+| Parámetro | Efecto |
+|-----------|--------|
+| **Tamaño del chunk** (p. ej. 500–1000 tokens) | Muy pequeño → pierde contexto; muy grande → ruido y respuestas vagas |
+| **Solapamiento (overlap)** (p. ej. 10–20 %) | Evita cortar procedimientos o listas de pasos entre dos chunks |
+| **Criterio de corte** | Párrafo, sección o página — en manuales técnicos suele ir mejor **por sección** que por caracteres fijos |
+| **Metadata** (documento, versión, línea, fecha) | Permite filtrar: «solo procedimientos vigentes 2025» |
+
+### Errores habituales
+
+| Error | Consecuencia |
+|-------|--------------|
+| Corpus sin limpiar | Borradores y duplicados indexados |
+| Chunks demasiado grandes | Contexto irrelevante en el prompt |
+| Chunks demasiado pequeños | Falta el «si… entonces…» completo del procedimiento |
+| Sin metadata | Mezcla versiones o ámbitos distintos (líneas, departamentos) |
+| Confundir corpus con datos vivos | RAG no sustituye APIs de tiempo real ni maestros transaccionales |
+
+### Relación corpus → chunking → RAG
+
+| Concepto | Rol |
+|----------|-----|
+| **Corpus** | *Qué* documentos puede consultar el sistema |
+| **Chunking** | *Cómo* se trocean para encontrar la parte correcta |
+| **Embeddings + índice** | Representación buscable de cada chunk |
+| **RAG** | Recuperar chunks + generar respuesta con el fundacional |
+
 
 Los vectores se almacenan en:
 
@@ -111,5 +180,6 @@ Muchos proyectos maduros combinan **ML clásico para la señal** y **GenAI para 
 
 - Modelos fundacionales se consumen por API; tokens y contexto definen coste y límites.
 - Embeddings e índices vectoriales son el corazón de RAG enterprise.
+- **Corpus** gobernado y **chunking** bien diseñado determinan la calidad del RAG tanto como el modelo.
 - Gobierno de prompts, guardrails y logging son parte de la arquitectura, no un extra.
 - GenAI amplía capacidades pero introduce riesgos que ML clásico no tenía en la misima forma.
